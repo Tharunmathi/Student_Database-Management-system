@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="E:/Users/THARUN/DB Browser/EXAMPLES/data/sdms.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser query" current="2"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="150"/><column_width id="3" width="1450"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,4:mainAi_A"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Ai_A" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="97"/><column index="2" value="131"/><column index="3" value="124"/><column index="4" value="126"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">select * from student;
+-- DDL COMMANDS(DATA DEFINITION LANGUAGE) i) create ii)alter iii) drop iv) RENAME
+select * from SRM_STUDENTS;
+
+create table SRM_STUDENTS( STUD_ID int,STUD_NAME varchar(20),STUD_DEPT varchar(20),STUD_YEAR int);
+insert into SRM_STUDENTS(STUD_ID,STUD_NAME,STUD_DEPT,STUD_YEAR) values 
+(115,&quot;Ajay&quot;,&quot;AI&quot;,2);
+insert into SRM_STUDENTS(STUD_ID,STUD_NAME,STUD_DEPT,STUD_YEAR) values 
+(86,&quot;THARUN&quot;,&quot;IT&quot;,3);
+insert into SRM_STUDENTS(STUD_ID,STUD_NAME,STUD_DEPT,STUD_YEAR) values 
+(91,&quot;PAVAN&quot;,&quot;CSE&quot;,4);
+insert into SRM_STUDENTS(STUD_ID,STUD_NAME,STUD_DEPT,STUD_YEAR) values 
+(152,&quot;SANGA&quot;,&quot;EEE&quot;,3);
+insert into SRM_STUDENTS(STUD_ID,STUD_NAME,STUD_DEPT,STUD_YEAR) values 
+(154,&quot;SANDEEP&quot;,&quot;ECE&quot;,2);
+insert into SRM_STUDENTS(STUD_ID,STUD_NAME,STUD_DEPT,STUD_YEAR) values 
+(143,&quot;RANGA SAI&quot;,&quot;AI&quot;,3);
+insert into SRM_STUDENTS(STUD_ID,STUD_NAME,STUD_DEPT,STUD_YEAR) values 
+(123,&quot;CHARITH&quot;,&quot;EEE&quot;,4);
+insert into SRM_STUDENTS(STUD_ID,STUD_NAME,STUD_DEPT,STUD_YEAR) values 
+(111,&quot;ABINAY&quot;,&quot;AI&quot;,2);
+alter TABLE SRM_STUDENTS ADD STUD_DOB date;
+DROP table SRM_STUDENTS;
+
+-- DML COMMANDS(DATA MANIPULATION LANGUAGE) i) SELECT ii) INSERT iii) UPDATE iv) DELETE
+select * from SRM_STUDENTS;
+select * from SRM_STUDENTS  where STUD_YEAR BETWEEN 1 and 4;
+
+insert into SRM_STUDENTS(STUD_ID,STUD_NAME,STUD_DEPT,STUD_YEAR) values 
+(255,&quot;Ajay&quot;,&quot;AI&quot;,4);
+insert into SRM_STUDENTS(STUD_ID,STUD_NAME,STUD_DEPT,STUD_YEAR) values 
+(86,&quot;THARUN&quot;,&quot;IT&quot;,3);
+insert into SRM_STUDENTS(STUD_ID,STUD_NAME,STUD_DEPT,STUD_YEAR) values 
+(91,&quot;PAVAN&quot;,&quot;CSE&quot;,4);
+insert into SRM_STUDENTS(STUD_ID,STUD_NAME,STUD_DEPT,STUD_YEAR) values 
+(152,&quot;SANGA&quot;,&quot;EEE&quot;,3);
+insert into SRM_STUDENTS(STUD_ID,STUD_NAME,STUD_DEPT,STUD_YEAR) values 
+(154,&quot;SANDEEP&quot;,&quot;ECE&quot;,2);
+insert into SRM_STUDENTS(STUD_ID,STUD_NAME,STUD_DEPT,STUD_YEAR) values 
+(143,&quot;RANGA SAI&quot;,&quot;AI&quot;,3);
+insert into SRM_STUDENTS(STUD_ID,STUD_NAME,STUD_DEPT,STUD_YEAR) values 
+(123,&quot;CHARITH&quot;,&quot;EEE&quot;,4);
+insert into SRM_STUDENTS(STUD_ID,STUD_NAME,STUD_DEPT,STUD_YEAR) values 
+(111,&quot;ABINAY&quot;,&quot;AI&quot;,2);
+UPDATE SRM_STUDENTS SET (STUD_NAME =&quot;AJAY&quot;,STUD_ID = 115) WHERE STUD_ID= 86;
+DELETE  from SRM_STUDENTS where STUD_ID = 86;
+
+
+-- DCL COMMANDS (DATA CONTROL LANGUAGE) i) GRANT ii) REVOKE
+GRANT SELECT ON SRM_STUDENTS TO &quot;Ajay&quot;;
+
+REVOKE SELECT ON SRM_STUDENTS FROM &quot;THARUN&quot;;
+
+-- BUILT IN FUNCTIONS
+select * from SRM_STUDENTS;
+create table SRM_STUDENTS( STUD_ID int,STUD_NAME varchar(20),STUD_DEPT varchar(20),STUD_YEAR int);
+insert into SRM_STUDENTS(STUD_ID,STUD_NAME,STUD_DEPT,STUD_YEAR) values 
+(115,&quot;Ajay&quot;,&quot;AI&quot;,2);
+insert into SRM_STUDENTS(STUD_ID,STUD_NAME,STUD_DEPT,STUD_YEAR) values 
+(86,&quot;THARUN&quot;,&quot;IT&quot;,3);
+insert into SRM_STUDENTS(STUD_ID,STUD_NAME,STUD_DEPT,STUD_YEAR) values 
+(91,&quot;PAVAN&quot;,&quot;CSE&quot;,4);
+insert into SRM_STUDENTS(STUD_ID,STUD_NAME,STUD_DEPT,STUD_YEAR) values 
+(152,&quot;SANGA&quot;,&quot;EEE&quot;,3);
+insert into SRM_STUDENTS(STUD_ID,STUD_NAME,STUD_DEPT,STUD_YEAR) values 
+(154,&quot;SANDEEP&quot;,&quot;ECE&quot;,2);
+insert into SRM_STUDENTS(STUD_ID,STUD_NAME,STUD_DEPT,STUD_YEAR) values 
+(143,&quot;RANGA SAI&quot;,&quot;AI&quot;,3);
+insert into SRM_STUDENTS(STUD_ID,STUD_NAME,STUD_DEPT,STUD_YEAR) values 
+(123,&quot;CHARITH&quot;,&quot;EEE&quot;,4);
+insert into SRM_STUDENTS(STUD_ID,STUD_NAME,STUD_DEPT,STUD_YEAR) values 
+(111,&quot;ABINAY&quot;,&quot;AI&quot;,2);
+select * from SRM_STUDENTS;
+select count(STUD_ID) from SRM_STUDENTS where STUD_ID&gt;91;
+select avg(STUD_YEAR) from SRM_STUDENTS;
+select sum(STUD_ID) from SRM_STUDENTS;
+select min(STUD_YEAR) from SRM_STUDENTS;
+select max(STUD_ID) from SRM_STUDENTS;
+select upper(STUD_NAME) from SRM_STUDENTS;
+select lower(STUD_NAME) from SRM_STUDENTS;
+select * from SRM_STUDENTS where STUD_ID BETWEEN 86 and 143;
+select * from SRM_STUDENTS ORDER by STUD_NAME;
+select * from SRM_STUDENTS where STUD_ID&gt; 111;
+select * from SRM_STUDENTS where STUD_ID &lt;&gt; 111;
+select * from SRM_STUDENTS where STUD_ID &lt; 111;
+SELECT * from SRM_STUDENTS where STUD_NAME = &quot;THARUN&quot; and STUD_ID = 86;
+
+-- TRANSACTIONS COMMANDS(i) commit ii) roll back iii) SAVEPOINT 
+delete from SRM_STUDENTS where STUD_ID = 86;
+commit;  -- COMMIT TRANSCATIONS COMMAND
+select * from SRM_STUDENTS;
+select * from SRM_STUDENTS ORDER by STUD_NAME;
+delete from SRM_STUDENTS where STUD_ID = 86;
+ROLLBACK;
+select * from SRM_STUDENTS;
+SAVEPOINT SP1;
+delete from SRM_STUDENTS where STUD_ID = 86;
+SAVEPOINT SP2;
+ROLLBACK to SP1;
+
+
+-- SQL SUBQUERIES 
+-- i)SELECT command in subqueries
+select * from SRM_STUDENTS where STUD_ID = (select max(STUD_ID) from SRM_STUDENTS );
+select * from SRM_STUDENTS where STUD_ID &lt; (select max(STUD_ID) from SRM_STUDENTS );
+select * from SRM_STUDENTS where STUD_ID &gt; (select max(STUD_ID) from SRM_STUDENTS );
+-- ii) Insert command in subqueries
+create table Ai_A(Ai_A_ID int,Ai_A_NAME varchar(30),Ai_A_DEPT varchar(20),Ai_A_YEAR number);
+insert into Ai_A values (105,&quot;Shruthi&quot;,&quot;IT&quot;,3);
+insert into Ai_A values (108,&quot;Nishtha&quot;,&quot;AI&quot;,3);
+insert into Ai_A values (124,&quot;Saifeen&quot;,&quot;CSE&quot;,4);
+insert into Ai_A values (153,&quot;Leela&quot;,&quot;ECE&quot;,2);
+
+select * from Ai_A;
+
+create table Ai_B(Ai_B_ID int,Ai_B_NAME varchar(30),Ai_B_DEPT varchar(20),Ai_B_YEAR number);
+insert into Ai_B select * from Ai_A where Ai_A_ID in (select Ai_A_ID from Ai_A where Ai_A_YEAR &gt;2);
+select * from Ai_B;
+-- Delete subquery
+select * from Ai_B;
+delete from Ai_B where Ai_B_YEAR in (select Ai_B_YEAR from Ai_B where Ai_B_YEAR &lt;5);
+
+-- JOINS IN SQL
+create table cricket(cricket_id int auto_increment,name varchar(20),primary key(cricket_id));
+create table football(football_id int auto_increment,name varchar(20),primary key(football_id));
+insert into cricket(name) values('stwart'),('michael'),('Johnson'),('Warner');
+select * from cricket;
+insert into football(name) values('kohli'),('rohith'),('Johnson'),('Warner');
+select * from football;
+-- The people who are part of both game??
+select * from cricket as c inner join football  as f on c.name = f.name;
+-- we can select individual columns
+select c.cricket_id ,c.name,f.football_id,f.name from cricket as c inner join football as f on c.name = f.name;
+select c.cricket_id ,c.name,f.football_id,f.name from cricket as c left join football as f on c.name = f.name;
+select c.cricket_id ,c.name,f.football_id,f.name from cricket as c right join football as f on c.name = f.name;
+
+-- Exception Handling in sql
+-- i) user defined exceptions:
+DECLARE
+    x int:=&amp;x; /*taking value at run time*/
+    y int:=&amp;y;
+    div_r float;
+    exp1 EXCEPTION;
+    exp2 EXCEPTION;
+
+BEGIN
+IF y=0 then
+	raise exp1;
+ELSE IF y &gt; x then
+	raise exp2;
+ELSE
+	div_r:= x / y;
+	dbms_output.put_line('the result is '||div_r);
+END IF;
+EXCEPTION
+WHEN exp1 THEN
+	dbms_output.put_line('Error');
+	dbms_output.put_line('division by zero not allowed');
+
+WHEN exp2 THEN
+	dbms_output.put_line('Error');
+	dbms_output.put_line('y is greater than x please check the input');
+END;
+DECLARE
+   temp varchar(20);
+  
+BEGIN
+   SELECT g_id into temp from geeks where g_name='Tharun';
+  
+exception
+   WHEN no_data_found THEN
+      dbms_output.put_line('ERROR');
+      dbms_output.put_line('there is no name as');
+      dbms_output.put_line('Tharun is not in table');
+end;
+DECLARE
+   temp number;   
+  
+BEGIN
+   SELECT g_name  into temp from SRM_STUDENTS where STUD_NAME='Ajay';
+   dbms_output.put_line('the stud_name is '||temp);
+  
+EXCEPTION
+   WHEN value_error THEN
+   dbms_output.put_line('Error');
+   dbms_output.put_line('Change data type of temp to varchar(20)');
+  
+END;
+DECLARE
+   a int:=10;
+   b int:=0;
+   answer int;
+  
+BEGIN
+   answer:=a/b;
+   dbms_output.put_line('the result after division is'||answer);
+  
+exception
+   WHEN zero_divide THEN
+      dbms_output.put_line('dividing by zero please check the values again');
+      dbms_output.put_line('the value of a is '||a);
+      dbms_output.put_line('the value of b is '||b);
+END;</sql><current_tab id="0"/></tab_sql></sqlb_project>
